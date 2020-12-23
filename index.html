@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Сайт Дмитрия Алексеева</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+	<script defer src="js/start.bundle.js"></script>
+
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+	<header class="header">
+		
+		<div class="container container--header">
+			<button class="header__buteer-but" type="button" aria-label="кнопка меню" aria-controls="b1" tabIndex="0">
+			</button>
+			<div class="header__contact">
+				<a href="tel:74999955577" class="header__tel" aria-label="позвонить">+7 (499) 995-55-77</a>
+				<button class="header__btn" type="button" data-toggle="modal" data-target="#ordercall"
+					aria-label="Заказать звонок"><span class="header__btn-text">Заказать звонок</span></button>
+				<!----	<a href="" class="header__mobile-tel" aria-label="Заказать звонок"></a>--->
+			</div>
+			<nav class="nav-block" id="b1">
+				<ul>
+					<li class="header__link-list"><a href="#1" class="header__link">Услуги </a></li>
+					<li class="header__link-list"><a href="#2" class="header__link">Портфолио </a></li>
+					<li class="header__link-list"><a href="#3" class="header__link">Стоимость</a></li>
+				</ul>
+			</nav>
+		</div>
+			<div class="progress-line"></div>
+		
+	</header>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Узнать больше</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="ordersend">
+					<input type="hidden" name="project_name" value="Сайт Алексеева">
+					<input type="hidden" name="admin_email" value="info@ki30.ru">
+					<input type="hidden" name="form_subject" value="Заявка на информацию">
+					<div class="mb-3">
+						<label for="recipient-email" class="col-form-label">Email:</label>
+						<input class="form-control" name="Client_email" id="recipient-email" type="email" required />
+					</div>
+					<div class="mb-3">
+						<label for="Phone_ordersend" class="col-form-label">Телефон:</label>
+						<input class="form-control" name="Phone" placeholder="+7-(___)_______" type="tel" id="Phone_ordersend" required />
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="submit" class="btn btn-primary">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="ordercall" tabindex="-1" aria-labelledby="idordercall" aria-hidden="true">
+		<div class="modal-dialog modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="idordercall">Заказать звонок</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="form_ordercall">
+					<input type="hidden" name="project_name" value="Сайт Алексеева">
+					<input type="hidden" name="admin_email" value="info@ki30.ru">
+					<input type="hidden" name="form_subject" value="Заявказ звонка">
+					<div class="mb-3">
+						<label for="recipient-name" class="col-form-label">Имя:</label>
+						<input type="text" class="form-control" name="Client_Name" id="recipient-name" />
+					</div>
+					<div class="mb-3">
+						<label for="Phone_ordercall" class="col-form-label">Телефон:</label>
+						<input class="form-control" name="Phone" placeholder="+7-(___)_______" type="tel" id="Phone_ordercall" required />
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="submit" class="btn btn-primary">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="sendalert" tabindex="-1" aria-labelledby="ModalAlert" aria-hidden="true">
+		<div class="modal-dialog modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="ModalAlert">Информация успешно отправленна.</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+	<main>
+		<section class="section1">
+			<div class="svg-tag">
+				<svg class="svg-tag__svgimg" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gradient_txt" x1="0.8" x2="1" y1="0.3" y2="1">
+							<stop offset="0" stop-color="#ff2f96" />
+							<stop offset="1" stop-color="#ff8f5a" />
+						</linearGradient>
+						<symbol class="svg-tag__txt1" id="a1">
+							<text class="svg-tag__element1">{ }</text>
+							<text class="svg-tag__element2">&lt;div&gt;</text>
+							<text class="svg-tag__element3">&lt;/&gt;</text>
+							<text class="svg-tag__element4">&lt;/&gt;</text>
+							<text class="svg-tag__element5">#</text>
+							<text class="svg-tag__element2-copy">&lt;div&gt;</text>
+
+						</symbol>
+					</defs>
+					<use xlink:href="#a1" />
+				</svg>
+			</div>
+			<div class="section1-ellipse">
+				<svg class="section1-ellipse__svgimg" xmlns="http://www.w3.org/2000/svg" width="814" height="630"
+					viewBox="0 0 814 630">
+					<defs>
+						<linearGradient id="gradient" x1="371.97" x2="548.51" y1="763.68" y2=".74"
+							gradientUnits="userSpaceOnUse">
+							<stop offset="0" stop-color="#ff8f5a" />
+							<stop offset="1" stop-color="#ff2f96" />
+						</linearGradient>
+					</defs>
+
+					<path fill="url(#gradient)" class="elips2"
+						d="M395.52 40.407C502.261-10.05 602.994-10.204 687.212 27.67c84.435 37.567 152.356 113.165 198.491 207.114 44.27 94.884 44.223 196.799 8.068 279.242-36.656 83.673-97.666 146.755-180.805 191.777-44.03 22.669-90.312 38.198-149.148 47.731-58.06 9.394-128.676 12.79-203.493 7.944-148.474-9.32-314.876-53.081-349.967-151.79-19.887-49.012-7.404-105.197 17.32-161.739 25.13-56.624 62.503-113.604 101.74-166.115 39.645-52.593 81.155-100.717 123.891-141.53C296.45 99.41 340.817 65.828 395.52 40.408z" />
+				</svg>
+			</div>
+
+			<div class="container">
+				<figure class="section1-wrap">
+					<div class="section1-wrap__photo">
+						<picture class="section1-wrap__photo-mainimg">
+							<source media="(min-width: 840px)" type="image/webp"
+								srcset="img/shutterstock_574398823.webp">
+							<source media="(min-width: 840px)" srcset="img/shutterstock_574398823.png">
+							<source type="image/webp" srcset="img/shutterstock_574398823_small.webp">
+							<img class="section1-wrap__photo-mainimg" src="img/shutterstock_574398823_small.png"
+								alt="фотография Дмитрия Алексеева">
+						</picture>
+					</div>
+					<figcaption class="section1-wrap__name-txt">
+						<hgroup class="section1-wrap__hgroup-class">
+							<h1 class="section1-wrap__h1" tabIndex="0">Дмитрий Алексеев</h1>
+							<h2 class="section1-wrap__h2" tabIndex="0">Frontend-разработчик и веб-верстальщик</h2>
+						</hgroup>
+						<button class="btn-class btn-class--wrap" type="button" data-toggle="modal"
+							data-target="#exampleModal">Узнать
+							больше</button>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+		<article class="container container--midlle-up">
+			<h2 class="container__midlle-block-h2" tabIndex="0" id="1">Что я делаю</h2>
+			<div class="container__midlle-block container__sprite1" tabIndex="0">
+				<span class="container__midlle-block-h2-1 container__midlle-block-item">Вёрстка лендинг–страниц
+					и&nbsp;сайтов любой сложности</span>
+				---></div>
+			<div class="container__midlle-block container__sprite2" tabIndex="0">
+				<span class="container__midlle-block-h2-2 container__midlle-block-item">Адаптивная вёрстка под&nbsp;все
+					браузеры и устройства</span>
+			</div>
+			<div class="container__midlle-block container__sprite3" tabIndex="0">
+				<span class="container__midlle-block-h2-3 container__midlle-block-item">Frontend–разработка
+					и&nbsp;программирование</span>
+			</div>
+			<div class="container__midlle-block container__sprite4" tabIndex="0">
+				<span class="container__midlle-block-h2-4 container__midlle-block-item">Исправление и доработка
+					существующей вёрстки</span>
+			</div>
+
+
+			<button class="btn-class btn-class--prise" type="button">Узнать стоимость</button>
+		</article>
+		<article class="container container__midlle-main">
+			<h2 class="container__midlle-main-h2" tabIndex="0" id="2">Примеры моих работ</h2>
+			<div class="swiper-button">
+				<button class="swiper-button-next" type="button"></button>
+				<button class="swiper-button-prev" type="button"></button>
+			
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide"><a href="">
+									<img class="swiper-slide__img swiper-lazy" data-src="img/Rectangle_4.webp"
+										alt="Сайт психолога Веры Антоновой">
+								<div class="swiper-slide__h2">Сайт психолога
+									Веры Антоновой</div>
+							</a></div>
+						<div class="swiper-slide"><a href="">
+									<img class="swiper-slide__img swiper-lazy" data-src="img/Rectangle_2.webp"
+										alt="Сайт магазина детской одежды">
+								<div class="swiper-slide__h2">Сайт магазина детской одежды</div>
+							</a></div>
+						<div class="swiper-slide"><a href="">
+									<img class="swiper-slide__img swiper-lazy" data-src="img/Rectangle_3.webp"
+										alt="Сайт магазина «Рыболов»">
+								<span class="swiper-slide__h2">Сайт магазина
+									«Рыболов»</span>
+							</a></div>
+						<div class="swiper-slide"><a href="">
+									<img class="swiper-slide__img swiper-lazy" data-src="img/Rectangle_4.webp"
+										alt="Сайт психолога Веры Антоновой">
+								<span class="swiper-slide__h2">Сайт психолога Веры Антоновой</span>
+							</a></div>
+
+				</div>
+			</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<button class="btn-class btn-class--order" type="button">Заказать проект</button>
+		</article>
+		<div class="midlle-down" tabIndex="0" id="3">
+			<div class="midlle-down__svg">
+				<svg class="midlle-down__svg-img" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<symbol class="midlle-down__svg-down-txt" id="a2">
+							<text class="midlle-down__svg-down-element1">{ }</text>
+							<text class="midlle-down__svg-down-element2">{ }</text>
+							<text class="midlle-down__svg-down-element3">&lt;/&gt;</text>
+							<text class="midlle-down__svg-down-element4">#</text>
+							<text class="midlle-down__svg-down-element5">&lt;div&gt;</text>
+
+						</symbol>
+					</defs>
+					<use xlink:href="#a2" />
+				</svg>
+			</div>
+			<span class="midlle-down__text">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего
+				за&nbsp;4 часа.*</span>
+			<span class="midlle-down__text-small">* Срок и стоимость могут отличаться от заявленных и рассчитываются
+				индивидуально, в&nbsp;зависимости от сложности задач</span>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container container--footer-section">
+			<div class="footer__nav">
+				<ul>
+					<li class="footer__nav-li1"><a href="#1" class="footer__link-footer">Услуги</a></li>
+					<li><a href="#2" class="footer__link-footer">Портфолио</a></li>
+					<li><a href="#3" class="footer__link-footer">Стоимость</a></li>
+				</ul>
+			</div>
+			<div class="footer__contact">
+				<a href="tel:74999957755" class="footer__phone-footer" aria-label="позвонить по номеру +74999957755"> +7
+					(499) 995-77-55</a>
+				<a href="mailto:dmitry@alekseev.com" class="footer__mail-footer"
+					aria-label="написать письмо dmitry@alekseev.com"> dmitry@alekseev.com</a>
+			</div>
+			<div class="footer__social">
+				<button class="footer__btn-footer" type="button" data-toggle="modal"
+					data-target="#exampleModal">Заказать звонок</button>
+				<div class="footer__social-link" aria-label="Ссылки на соцсети">
+					<a href="" class="footer__vk" aria-label="ВКонтакте"></a>
+					<a href="" class="footer__facebook" aria-label="facebook"></a>
+					<a href="" class="footer__twitter" aria-label="twitter"></a>
+					<a href="" class="footer__instagram" aria-label="instagram"></a>
+				</div>
+			</div>
+		</div>
+		<aside class="footer__aside">
+			&copy; Дмитрий Алексеев, 2016 – 2018
+		</aside>
+	</footer>
+
+</body>
+
+</html>
